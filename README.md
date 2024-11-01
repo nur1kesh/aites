@@ -17,7 +17,7 @@ Welcome to **AITES**, your one-stop shop for all things tech! 🚀 We bring the 
 
 ⭐ **Product Ratings:** Rate your favorite products on a 5-star scale to get personalized recommendations. Your ratings also help fellow tech enthusiasts make informed choices!
 
-🎥 **New Product Previews:** Check out our featured product videos, like the latest iPhone 16 📱 ([smart111.mp4](images/smart111.mp4)), for an immersive sneak peek.
+🎥 **New Product Previews:** Check out our featured product videos, like the latest iPhone 16 📱 ([i16.mp4](images/i16.mp4)), for an immersive sneak peek.
 
 🛠️ **Detailed Product Insights:** Each product page is packed with FAQs, specifications, and high-quality images to guide you in making the best choices.
 
@@ -60,12 +60,15 @@ Welcome to **AITES**, your one-stop shop for all things tech! 🚀 We bring the 
 
 ### 📸 Screenshots
 
-*![Homepage Screenshot](images/homepage.png)*  
-*![Product Page Screenshot](images/product-page.png)*  
+*![Log In & Sign Up Page Screenshot](images/login-page.jpg)*  
+*![Phones Page Screenshot](images/phones-page.jpg)*  
+*![TVs Page Screenshot](images/tvs-page.jpg)*  
+*![Gaming PCs Page Screenshot](images/gamingpcs-page.jpg)*  
 
 ### 📹 Demo Video
 
-Check out our [AITES product demo](images/smart111.mp4) to see what’s new and exciting in our lineup!
+Check out our [AITES product demo](images/i16.mp4) to see what’s new and exciting in our lineup!
+*![New Product](images/new-product.jpg)* 
 
 ## 🌟 Special Features
 

@@ -1,0 +1,560 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 80px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+body.dark-theme .card,
+body.dark-theme .faq-question {
+    background-color: #1f1f1f;
+}
+
+body.dark-theme .faq-answer {
+    background-color: #2a2a2a;
+}
+
+body.dark-theme .navbar,
+body.dark-theme #footer {
+    background-color: #333;
+}
+
+/* Header and Navigation */
+#header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000000;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link:hover,
+/* Style for focused menu items */
+.nav-link:focus {
+    background-color: #007bff;
+    color: #ff00e6;
+    outline: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+/* Main Content */
+#main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Greeting Section */
+#greeting {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-align: center;
+}
+
+/* Read More Button */
+#extra-content {
+    display: none;
+    margin: 20px 0;
+}
+
+#read-more-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#read-more-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Dynamic Content Section */
+#dynamic-content-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#random-quote {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#get-quote-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#get-quote-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Hot Deals Section */
+#hot-deals-section h2 {
+    font-size: 32px;
+    color: #333;
+    font-weight: bold;
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 350px;
+    margin: 10px auto;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-title {
+    font-size: 20px;
+    color: #007bff;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.text-decoration-none:hover h5 {
+    text-decoration: underline;
+}
+
+/* New Product Announcement Section */
+.blockquote {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-left: 5px solid #007bff;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.blockquote-footer {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* Catalogue Section */
+#catalogue-section h2 {
+    font-size: 32px;
+    color: #333;
+    font-weight: bold;
+}
+
+.btn-outline-primary {
+    border: 2px solid #007bff;
+    color: #007bff;
+    font-size: 18px;
+    padding: 12px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* FAQ Section */
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #0056b3;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-left: 3px solid #007bff;
+    font-size: 16px;
+    color: #333;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-answer.visible {
+    display: block;
+    max-height: 100px; /* Adjust as necessary */
+}
+
+/* Popup Styling */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    z-index: 1001;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.popup.fade-in {
+    display: block;
+    opacity: 1;
+}
+
+.popup.fade-out {
+    opacity: 0;
+}
+
+/* Hide when not active */
+.popup.hidden {
+    display: none;
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.popup button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.popup button:hover {
+    background-color: #0056b3;
+}
+
+/* Background Color Change Button */
+#change-color {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#change-color:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Date and Time Display */
+#date-time {
+    font-size: 18px;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+#footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+#footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+    color: #d4d4d4;
+}
+
+/* Carousel Styles */
+.carousel-item {
+    height: 400px;
+}
+
+.carousel-item img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel-control-prev-icon {
+    background-color: #0056b3 !important;
+}
+
+.carousel-control-next-icon {
+    background-color: #0056b3 !important;
+}
+
+.nav-link.active {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .blockquote {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-link {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .blockquote {
+        font-size: 14px;
+    }
+}
+
+/* Navigation Menu Keyboard Focus */
+#menu li {
+    outline: none;
+}
+
+#menu li:focus {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Typing Effect */
+#typingEffect {
+    font-size: 24px;
+    color: #333;
+    margin: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Loading Animation */
+.loader {
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #3498db;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+}
+
+/* Logo Styling */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px; 
+}
+
+.header-logo {
+    width: 200px;
+    height: auto;
+    margin-right: 250px;
+}
+
+#header button {
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+#theme-toggle {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+    background-color: #333;
+    color: white;
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Password Generator */
+#generatePasswordBtn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#passwordOutput {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+a.btn-login {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #09bcc2;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 16px;
+}
+
+a.btn-login:hover {
+    background-color: #20edf4;
+    transform: scale(1.1);
+    color: #fff;
+}
+
+.cardis {
+  max-width: 33rem;
+  background: #fff;
+  margin: 2rem 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 0.5rem;
+}
+ 
+.star {
+  font-size: 10vh;
+  cursor: pointer;
+}
+ 
+.one {
+  color: rgb(255, 0, 0);
+}
+ 
+.two {
+  color: rgb(255, 106, 0);
+}
+ 
+.three {
+  color: rgb(251, 255, 120);
+}
+ 
+.four {
+  color: rgb(255, 255, 0);
+}
+ 
+.five {
+  color: rgb(24, 159, 14);
+}

@@ -31,6 +31,22 @@ faqQuestions.forEach(question => {
     });
 });
 
+// "Buy Now" button with sound effect and confirmation
+const buyNowButtons = document.querySelectorAll('.custom-btn');
+const purchaseSound = new Audio('sounds/purchase.mp3');
+buyNowButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        event.preventDefault();
+        const confirmPurchase = confirm('Do you want to proceed with the purchase?');
+        if (confirmPurchase) {
+            alert('Thank you for your purchase!');
+            purchaseSound.play();
+        } else {
+            alert('Purchase canceled.');
+        }
+    });
+});
+
 let nextButton = document.getElementById('next');
 let prevButton = document.getElementById('prev');
 let carousel = document.querySelector('.carousel');
@@ -410,22 +426,6 @@ function date_time(id)
         return true;
 }
 window.onload = date_time('s');
-
-// "Buy Now" button with sound effect and confirmation
-const buyNowButtons = document.querySelectorAll('.custom-btn');
-const purchaseSound = new Audio('sounds/purchase.mp3');
-buyNowButtons.forEach(button => {
-    button.addEventListener('click', (event) => {
-        event.preventDefault();
-        const confirmPurchase = confirm('Do you want to proceed with the purchase?');
-        if (confirmPurchase) {
-            alert('Thank you for your purchase!');
-            purchaseSound.play();
-        } else {
-            alert('Purchase canceled.');
-        }
-    });
-});
 
 
 // Show greeting dynamically based on the time of day

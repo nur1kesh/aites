@@ -279,7 +279,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             // Filter products
             const escuelajsFiltered = escuelajsProducts.filter(product =>
                 product.category?.name === "Electronics" &&
-                [18, 19, 20, 21, 22, 23, 24, 25, 26, 27].includes(product.id)
+                [19, 20, 21, 22, 23, 24, 25, 26, 27].includes(product.id)
             );
 
             const fakestoreFiltered = fakestoreProducts.filter(product =>

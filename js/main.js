@@ -31,6 +31,58 @@ faqQuestions.forEach(question => {
     });
 });
 
+
+// Star rating elements
+let stars = document.getElementsByClassName("star");
+let output = document.getElementById("output");
+
+// Function to update rating and apply filter
+function gfg(n) {
+    remove();  // Reset all stars
+    let cls = "";
+    
+    // Apply color class based on rating
+    if (n === 1) cls = "one";
+    else if (n === 2) cls = "two";
+    else if (n === 3) cls = "three";
+    else if (n === 4) cls = "four";
+    else if (n === 5) cls = "five";
+    
+    for (let i = 0; i < n; i++) {
+        stars[i].classList.add(cls);
+    }
+    
+    output.innerText = `Rating is: ${n}/5`;
+    
+    // Save selected rating in local storage
+    localStorage.setItem('selectedRating', n);
+    filterByRating(n);
+}
+
+// Reset styling for all stars
+function remove() {
+    Array.from(stars).forEach(star => {
+        star.className = "star";  // Reset to base star class
+    });
+}
+
+// Filter products by selected star rating
+function filterByRating(rating) {
+    const products = document.querySelectorAll('.product-item');
+    products.forEach(product => {
+        const productRating = parseInt(product.getAttribute('data-rating'), 10);
+        product.style.display = productRating >= rating ? 'block' : 'none';
+    });
+}
+
+// Apply saved rating on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const savedRating = parseInt(localStorage.getItem('selectedRating'), 10);
+    if (savedRating) {
+        gfg(savedRating);  // Apply saved rating filter
+    }
+});
+
 // "Buy Now" button with sound effect and confirmation
 const buyNowButtons = document.querySelectorAll('.custom-btn');
 const purchaseSound = new Audio('sounds/purchase.mp3');
@@ -89,57 +141,6 @@ seeMoreButtons.forEach((button) => {
 backButton.onclick = function(){
     carousel.classList.remove('showDetail');
 }
-
-// Star rating elements
-let stars = document.getElementsByClassName("star");
-let output = document.getElementById("output");
-
-// Function to update rating and apply filter
-function gfg(n) {
-    remove();  // Reset all stars
-    let cls = "";
-    
-    // Apply color class based on rating
-    if (n === 1) cls = "one";
-    else if (n === 2) cls = "two";
-    else if (n === 3) cls = "three";
-    else if (n === 4) cls = "four";
-    else if (n === 5) cls = "five";
-    
-    for (let i = 0; i < n; i++) {
-        stars[i].classList.add(cls);
-    }
-    
-    output.innerText = `Rating is: ${n}/5`;
-    
-    // Save selected rating in local storage
-    localStorage.setItem('selectedRating', n);
-    filterByRating(n);
-}
-
-// Reset styling for all stars
-function remove() {
-    Array.from(stars).forEach(star => {
-        star.className = "star";  // Reset to base star class
-    });
-}
-
-// Filter products by selected star rating
-function filterByRating(rating) {
-    const products = document.querySelectorAll('.product-item');
-    products.forEach(product => {
-        const productRating = parseInt(product.getAttribute('data-rating'), 10);
-        product.style.display = productRating >= rating ? 'block' : 'none';
-    });
-}
-
-// Apply saved rating on page load
-document.addEventListener('DOMContentLoaded', () => {
-    const savedRating = parseInt(localStorage.getItem('selectedRating'), 10);
-    if (savedRating) {
-        gfg(savedRating);  // Apply saved rating filter
-    }
-});
 
 // Form Validation Function
 function validateForm() {
